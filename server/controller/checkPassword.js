@@ -23,7 +23,16 @@ async function checkPassword(request,response){
         }
         const token = await jwt.sign(tokenData,process.env.JWT_SECREAT_KEY,{ expiresIn : '1d'})
 
-        
+        // const cookieOptions = {
+        //     http : true,
+        //     secure : true
+        // }
+
+        // return response.cookie('token',token,cookieOptions).status(200).json({
+        //     message : "Login successfully",
+        //     token : token,
+        //     success :true
+        // })
 
         return response.status(200)
 
