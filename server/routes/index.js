@@ -16,7 +16,7 @@ router.post('/email',checkEmail)
 //check user password
 router.post('/password',checkPassword)
 //login user details
-router.get('/user-details',userDetails)
+router.post('/user-details',userDetails)
 //logout user
 router.get('/logout',logout)
 //update user details
