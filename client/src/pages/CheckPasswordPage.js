@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { IoClose } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import uploadFile from '../helpers/uploadFile';
 import axios from 'axios'
 import toast from 'react-hot-toast';
-import { PiUserCircle } from "react-icons/pi";
 import Avatar from '../components/Avatar';
 import { useDispatch } from 'react-redux';
 import { setToken, setUser } from '../redux/userSlice';
@@ -48,6 +45,11 @@ const CheckPasswordPage = () => {
           data : {
             userId : location?.state?._id,
             password : data.password
+          },
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+  
           },
           withCredentials : true
         })
