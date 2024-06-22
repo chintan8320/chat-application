@@ -49,7 +49,6 @@ const CheckPasswordPage = () => {
             userId : location?.state?._id,
             password : data.password
           },
-          withCredentials : true
         })
 
         toast.success(response.data.message)
